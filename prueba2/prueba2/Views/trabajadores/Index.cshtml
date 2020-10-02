@@ -1,0 +1,83 @@
+﻿@model IEnumerable<prueba2.Models.trabajadores>
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<h1>Inicio</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" >Crear nuevo</a>
+</p>
+<table class="table table-light  table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.trabajadorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.identificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipoindetificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.primernombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.segundonombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.primerapellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.segundoapellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fechadenacimineto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contratos)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.trabajadorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.identificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipoindetificacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.primernombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundonombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.primerapellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoapellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechadenacimineto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contratos.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn-warning btn">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn-primary btn">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn-danger btn">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

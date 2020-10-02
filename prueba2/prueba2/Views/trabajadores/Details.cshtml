@@ -1,0 +1,72 @@
+﻿@model prueba2.Models.trabajadores
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>trabajadores</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.trabajadorId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.trabajadorId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.identificacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.identificacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.tipoindetificacion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.tipoindetificacion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.primernombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.primernombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.segundonombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.segundonombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.primerapellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.primerapellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.segundoapellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.segundoapellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.fechadenacimineto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fechadenacimineto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.contratos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.contratos.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
